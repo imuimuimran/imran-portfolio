@@ -18,7 +18,7 @@ export default function Navbar() {
       <div className="section-container h-16 flex items-center justify-between">
 
         <Link
-          href="/"
+          href="#home"
           className="font-bold text-xl"
         >
           Imran
