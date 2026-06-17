@@ -21,6 +21,10 @@
 import Navbar from "@/components/shared/Navbar";
 import Hero from "@/components/sections/Hero";
 
+import About from "@/components/sections/About";
+import Journey from "@/components/sections/Journey";
+import Skills from "@/components/sections/Skills";
+
 export default function Home() {
   return (
     <>
@@ -28,6 +32,9 @@ export default function Home() {
 
       <main>
         <Hero />
+        <Journey />
+        <About />
+        <Skills />
       </main>
     </>
   );
