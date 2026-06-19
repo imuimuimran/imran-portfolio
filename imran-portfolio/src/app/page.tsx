@@ -26,6 +26,8 @@ import Journey from "@/components/sections/Journey";
 import Skills from "@/components/sections/Skills";
 import Projects from "@/components/sections/Projects";
 
+import GithubStats from "@/components/sections/GithubStats";
+
 import Education from "@/components/sections/Education";
 import Experience from "@/components/sections/Experience";
 import Contact from "@/components/sections/Contact";
@@ -44,6 +46,7 @@ export default function Home() {
         <About />
         <Skills />
         <Projects />
+        <GithubStats />
         <Education />
         <Experience />
         <Contact />

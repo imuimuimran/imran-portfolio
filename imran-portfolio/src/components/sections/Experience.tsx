@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import SectionHeading from "@/components/shared/SectionHeading";
 
 const experiences = [
   {
@@ -11,9 +12,9 @@ const experiences = [
       "March 2024 - May 2024",
 
     description:
-      
-        "Python Programming Training across 100 'School of Future' campuses, a Government project under the ICT Division. Where teach to students programming Syntax, Control Structures, OOPs concepts, and Basic Algorithms with Python programming language.",
-      
+
+      "Python Programming Training across 100 'School of Future' campuses, a Government project under the ICT Division. Where teach to students programming Syntax, Control Structures, OOPs concepts, and Basic Algorithms with Python programming language.",
+
   },
 
   {
@@ -58,7 +59,7 @@ export default function Experience() {
     >
       <div className="section-container">
 
-        <h2
+        {/* <h2
           className="
           text-4xl
           font-bold
@@ -67,7 +68,12 @@ export default function Experience() {
           "
         >
           Experience
-        </h2>
+        </h2> */}
+
+        <SectionHeading
+          title="Experience"
+          subtitle="Professional experience and achievements"
+        />
 
         <div
           className="

@@ -1,5 +1,6 @@
 "use client";
 
+import SectionHeading from "@/components/shared/SectionHeading";
 import { motion } from "framer-motion";
 
 export default function About() {
@@ -27,7 +28,7 @@ export default function About() {
             once: true,
           }}
         >
-          <h2
+          {/* <h2
             className="
             text-4xl
             font-bold
@@ -36,7 +37,12 @@ export default function About() {
             "
           >
             About Me
-          </h2>
+          </h2> */}
+
+          <SectionHeading
+            title="About Me"
+            subtitle="Get to know me"
+          />
 
           <div
             className="

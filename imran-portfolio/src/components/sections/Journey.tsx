@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import SectionHeading from "@/components/shared/SectionHeading";
 
 const journey = [
   {
@@ -37,7 +38,7 @@ export default function Journey() {
     <section className="py-24">
       <div className="section-container">
 
-        <h2
+        {/* <h2
           className="
           text-4xl
           font-bold
@@ -46,7 +47,12 @@ export default function Journey() {
           "
         >
           My Learning Journey
-        </h2>
+        </h2> */}
+
+        <SectionHeading
+          title="My Learning Journey"
+          subtitle="A brief history of continuous learning path"
+        />
 
         <div
           className="

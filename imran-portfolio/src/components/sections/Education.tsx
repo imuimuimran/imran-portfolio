@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { education } from "@/data/education";
+import SectionHeading from "@/components/shared/SectionHeading";
 
 export default function Education() {
   return (
@@ -11,7 +12,7 @@ export default function Education() {
     >
       <div className="section-container">
 
-        <h2
+        {/* <h2
           className="
           text-4xl
           font-bold
@@ -20,7 +21,12 @@ export default function Education() {
           "
         >
           Education & Training
-        </h2>
+        </h2> */}
+
+        <SectionHeading
+          title="Education & Training"
+          subtitle="My learning journey - academic, training & knowladge gathering"
+        />
 
         <div
           className="

@@ -1,3 +1,4 @@
+import SectionHeading from "@/components/shared/SectionHeading";
 import { projects } from "@/data/projects";
 
 import ProjectCard from "./ProjectCard";
@@ -10,7 +11,7 @@ export default function Projects() {
     >
       <div className="section-container">
 
-        <h2
+        {/* <h2
           className="
           text-4xl
           font-bold
@@ -31,7 +32,12 @@ export default function Projects() {
           Projects that showcase my
           learning journey and technical
           skills.
-        </p>
+        </p> */}
+
+        <SectionHeading
+          title="Featured Projects"
+          subtitle="Projects that showcase my learning journey and technical skills."
+        />
 
         <div
           className="

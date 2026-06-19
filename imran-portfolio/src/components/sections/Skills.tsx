@@ -1,7 +1,9 @@
 "use client";
 
+import SectionHeading from "@/components/shared/SectionHeading";
 import { skills } from "@/data/skills";
 import SkillCard from "./SkillCard";
+import { IconType } from "react-icons";
 
 export default function Skills() {
   return (
@@ -11,7 +13,7 @@ export default function Skills() {
     >
       <div className="section-container">
 
-        <h2
+        {/* <h2
           className="
           text-4xl
           font-bold
@@ -31,7 +33,12 @@ export default function Skills() {
         >
           Technologies I use to build
           modern web applications.
-        </p>
+        </p> */}
+
+        <SectionHeading
+          title="Skills & Technologies"
+          subtitle="Technologies I use to build modern web applications."
+        />
 
         <div className="space-y-10">
 
@@ -65,7 +72,11 @@ function SkillCategory({
   items,
 }: {
   title: string;
-  items: string[];
+  // items: string[];
+  items: {
+    name: string;
+    icon: IconType;
+  }[];
 }) {
   return (
     <div>
@@ -91,7 +102,7 @@ function SkillCategory({
       >
         {items.map((skill) => (
           <SkillCard
-            key={skill}
+            key={skill.name}
             skill={skill}
           />
         ))}

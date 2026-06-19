@@ -4,6 +4,8 @@ import {
   MessageCircle,
 } from "lucide-react";
 
+import SectionHeading from "@/components/shared/SectionHeading";
+
 export default function Contact() {
   return (
     <section
@@ -12,7 +14,7 @@ export default function Contact() {
     >
       <div className="section-container">
 
-        <h2
+        {/* <h2
           className="
           text-4xl
           font-bold
@@ -20,7 +22,12 @@ export default function Contact() {
           "
         >
           Contact Me
-        </h2>
+        </h2> */}
+
+        <SectionHeading
+          title="Contact"
+          subtitle="Let's work together"
+        />
 
         <p
           className="
