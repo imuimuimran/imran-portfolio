@@ -8,11 +8,24 @@ export const projects: Project[] = [
 
     title: "Scholar Stream",
 
-    image:
-      "/projects/scholar-stream.png",
+    image: "/projects/scholar-stream.png",
 
     description:
       "A scholarship management platform helping students discover and apply for scholarship opportunities.",
+
+    overview:
+      "Scholar Stream is a full-stack scholarship management platform where students can discover, apply for, and manage scholarship opportunities. The platform also provides administrative tools for managing applications, reviews, and scholarship data.",
+
+    features: [
+      "User Authentication with Firebase",
+      "Role-Based Dashboard",
+      "Scholarship Search and Filtering",
+      "Scholarship Application System",
+      "Review and Rating System",
+      "Admin Scholarship Management",
+      "JWT Protected Routes",
+      "Responsive Design",
+    ],
 
     technologies: [
       "React",
@@ -30,21 +43,17 @@ export const projects: Project[] = [
       "https://github.com/imuimuimran/scholar-stream-client",
 
     challenges: [
-      "Role-based authentication",
-
-      "Secure JWT implementation",
-
+      "Implementing role-based authentication",
+      "Managing secure JWT authorization",
       "Complex scholarship filtering",
-
-      "Application management workflow",
+      "Building a scalable application workflow",
     ],
 
     futurePlans: [
-      "Payment gateway integration",
-
-      "AI scholarship suggestions",
-
-      "Analytics dashboard",
+      "Payment Gateway Integration",
+      "AI Scholarship Recommendation System",
+      "Advanced Analytics Dashboard",
+      "Email Notification System",
     ],
   },
 
@@ -55,11 +64,24 @@ export const projects: Project[] = [
 
     title: "SkillHub Academy",
 
-    image:
-      "/projects/skillhub-academy.png",
+    image: "/projects/skillhub-academy.png",
 
     description:
-      "Course management platform for students and instructors.",
+      "A course management platform designed for students and instructors.",
+
+    overview:
+      "SkillHub Academy is a learning management system that allows instructors to create courses and students to browse, enroll, and manage their learning journey through a modern educational platform.",
+
+    features: [
+      "Course Creation & Management",
+      "Student Enrollment System",
+      "Role-Based Dashboard",
+      "Authentication & Authorization",
+      "Protected Routes",
+      "Course Details Page",
+      "Responsive User Interface",
+      "Modern Next.js Architecture",
+    ],
 
     technologies: [
       "Next.js",
@@ -76,21 +98,17 @@ export const projects: Project[] = [
       "https://github.com/imuimuimran/skillhub-academy",
 
     challenges: [
-      "Dashboard architecture",
-
-      "Authentication system",
-
+      "Designing scalable dashboard architecture",
+      "Managing authentication flows",
       "Course enrollment workflow",
-
-      "Database relationships",
+      "Database relationship management",
     ],
 
     futurePlans: [
-      "Certificates",
-
-      "Video courses",
-
-      "Live classes",
+      "Video Learning Support",
+      "Course Certificates",
+      "Live Classes",
+      "Instructor Analytics Dashboard",
     ],
   },
 
@@ -99,14 +117,26 @@ export const projects: Project[] = [
 
     slug: "food-lovers-network",
 
-    title:
-      "Local Food Lovers Network",
+    title: "Local Food Lovers Network",
 
-    image:
-      "/projects/food-lovers.png",
+    image: "/projects/food-lovers.png",
 
     description:
-      "Community platform connecting food enthusiasts and local food lovers.",
+      "A community platform connecting local food enthusiasts.",
+
+    overview:
+      "Local Food Lovers Network is a community-driven web application where food enthusiasts can share food experiences, discover local food events, and connect with people who share similar interests.",
+
+    features: [
+      "Community-Based Platform",
+      "Food Experience Sharing",
+      "Event Discovery",
+      "User Authentication",
+      "Responsive Design",
+      "CRUD Operations",
+      "Interactive UI",
+      "Dynamic Content Management",
+    ],
 
     technologies: [
       "React",
@@ -122,19 +152,16 @@ export const projects: Project[] = [
       "https://github.com/imuimuimran/local-food-lovers-network-client",
 
     challenges: [
-      "User-generated content",
-
-      "Responsive design",
-
-      "Community interactions",
+      "Managing user-generated content",
+      "Ensuring responsive layouts",
+      "Building community interaction features",
     ],
 
     futurePlans: [
-      "Food recommendation engine",
-
-      "Community groups",
-
-      "Event management",
+      "Food Recommendation Engine",
+      "Community Groups",
+      "Event Management System",
+      "Social Networking Features",
     ],
   },
 ];

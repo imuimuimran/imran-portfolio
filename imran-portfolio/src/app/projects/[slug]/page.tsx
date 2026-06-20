@@ -33,10 +33,11 @@ export default async function Page({
         gap-2
         mb-8
       text-blue-500
-      "
+        hover:underline
+        "
       >
         <ArrowLeft size={18} />
-        Back To Porjects
+        Back To Projects
       </Link>
 
       <Image
@@ -47,27 +48,133 @@ export default async function Page({
         className="
         rounded-2xl
         w-full
+        border
         "
       />
 
-      <h1
+      <div className="mt-10">
+
+        <h1
+          className="
+          text-4xl
+          md:text-5xl
+          font-bold
+          "
+        >
+          {project.title}
+        </h1>
+
+        <p
+          className="
+          text-lg
+          text-muted-foreground
+          mt-4
+          "
+        >
+          {project.description}
+        </p>
+      </div>
+
+      {/* ACTION BUTTONS */}
+
+      <div
         className="
-        text-5xl
-        font-bold
-        mt-10
+        flex
+        flex-wrap
+        gap-4
+        mt-8
         "
       >
-        {project.title}
-      </h1>
+        <a
+          href={project.liveLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="
+          px-6
+          py-3
+          rounded-lg
+          bg-green-600
+          text-white
+          font-medium
+          "
+        >
+          Live Demo
+        </a>
 
-      <p className="mt-5">
-        {project.description}
-      </p>
+        <a
+          href={project.githubLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="
+          px-6
+          py-3
+          rounded-lg
+          border
+          font-medium
+          "
+        >
+          GitHub Repository
+        </a>
+      </div>
 
-      <section className="mt-10">
+      {/* OVERVIEW */}
+
+      <section className="mt-14">
 
         <h2 className="text-3xl font-bold">
-          Technologies
+          Project Overview
+        </h2>
+
+        <p
+          className="
+          mt-4
+          leading-8
+          text-muted-foreground
+          "
+        >
+          {project.overview}
+        </p>
+      </section>
+
+      {/* FEATURES */}
+
+      <section className="mt-14">
+
+        <h2 className="text-3xl font-bold">
+          Key Features
+        </h2>
+
+        <ul
+          className="
+          grid
+          md:grid-cols-2
+          gap-3
+          mt-5
+          "
+        >
+          {project.features.map(
+            (feature) => (
+              <li
+                key={feature}
+                className="
+            border
+            rounded-lg
+            p-4
+            "
+              >
+                ✓ {feature}
+              </li>
+            )
+          )}
+        </ul>
+      </section>
+
+      {/* TECH STACK */}
+
+      <section className="mt-14">
+
+        <h2 className="text-3xl font-bold">
+          Technologies Used
         </h2>
 
         <div
@@ -85,8 +192,8 @@ export default async function Page({
                 className="
                 px-4
                 py-2
-                border
                 rounded-full
+                border
                 "
               >
                 {tech}
@@ -96,13 +203,22 @@ export default async function Page({
         </div>
       </section>
 
-      <section className="mt-10">
+      {/* CHALLENGES */}
+
+      <section className="mt-14">
 
         <h2 className="text-3xl font-bold">
-          Challenges
+          Challenges Faced
         </h2>
 
-        <ul className="list-disc ml-6 mt-4">
+        <ul
+          className="
+          list-disc
+          ml-6
+          mt-5
+          space-y-2
+          "
+        >
           {project.challenges.map(
             (challenge) => (
               <li key={challenge}>
@@ -113,50 +229,32 @@ export default async function Page({
         </ul>
       </section>
 
-      <section className="mt-10">
+      {/* FUTURE PLANS */}
+
+      <section className="mt-14">
 
         <h2 className="text-3xl font-bold">
-          Future Plans
+          Future Improvements
         </h2>
 
-        <ul className="list-disc ml-6 mt-4">
+        <ul
+          className="
+          list-disc
+          ml-6
+          mt-5
+          space-y-2
+          "
+        >
           {project.futurePlans.map(
             (plan) => (
-              <li key={plan}>{plan}</li>
+              <li key={plan}>
+                {plan}
+              </li>
             )
           )}
         </ul>
       </section>
 
-      <div className="flex gap-4 mt-10">
-
-        <a
-          href={project.liveLink}
-          target="_blank"
-          className="
-          px-6
-          py-3
-          rounded-lg
-          bg-green-600
-          text-white
-          "
-        >
-          Live Project
-        </a>
-
-        <a
-          href={project.githubLink}
-          target="_blank"
-          className="
-          px-6
-          py-3
-          rounded-lg
-          border
-          "
-        >
-          GitHub Repository
-        </a>
-      </div>
     </main>
   );
 }
