@@ -1,7 +1,9 @@
+import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 
 import { projects } from "@/data/projects";
+import { ArrowLeft } from "lucide-react";
 
 export default async function Page({
   params,
@@ -22,6 +24,20 @@ export default async function Page({
 
   return (
     <main className="section-container py-20">
+
+      <Link
+        href="/#projects"
+        className="
+        inline-flex
+        items-center
+        gap-2
+        mb-8
+      text-blue-500
+      "
+      >
+        <ArrowLeft size={18} />
+        Back To Porjects
+      </Link>
 
       <Image
         src={project.image}

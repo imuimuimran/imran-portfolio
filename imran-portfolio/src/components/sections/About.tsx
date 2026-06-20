@@ -46,12 +46,13 @@ export default function About() {
 
           <div
             className="
-            text-lg
-            leading-9
-            text-muted-foreground
+            grid
+            lg:grid-cols-3
+            gap-10
+            items-start
             "
           >
-            <p>
+            {/* <p>
               Hello! I'm Imran Hossain, a
               passionate Full Stack Developer
               who enjoys building modern web
@@ -89,8 +90,239 @@ export default function About() {
               helping others solve technical
               challenges and improving my
               problem-solving abilities.
-            </p>
+            </p> */}
+            {/* Personal Card */}
+            <div
+              className="
+              border
+              rounded-2xl
+              p-6
+              bg-card
+              "
+            >
+              <h3
+                className="
+                text-2xl
+                font-bold
+                mb-6
+                "
+              >
+                Imran Hossain
+              </h3>
+
+              <div className="space-y-4">
+
+                <div>
+                  <p className="font-medium">
+                    Location
+                  </p>
+
+                  <p className="text-muted-foreground">
+                    Bangladesh
+                  </p>
+                </div>
+
+                <div>
+                  <p className="font-medium">
+                    Education
+                  </p>
+
+                  <p className="text-muted-foreground">
+                    Masters in English (MA)
+                  </p>
+                </div>
+
+                <div>
+                  <p className="font-medium">
+                    Course
+                  </p>
+
+                  <p className="text-muted-foreground">
+                    CSE Fundamental with Phitron
+                  </p>
+                </div>
+
+                <div>
+                  <p className="font-medium">
+                    Focus
+                  </p>
+
+                  <p className="text-muted-foreground">
+                    Full Stack Development
+                  </p>
+                </div>
+
+                <div>
+                  <p className="font-medium">
+                    Status
+                  </p>
+
+                  <p className="text-green-500">
+                    Open to Opportunities
+                  </p>
+                </div>
+
+              </div>
+            </div>
+
+            {/* Story */}
+            <div className="lg:col-span-2">
+              <div className="space-y-8">
+
+                <div>
+                  <h3
+                    className="
+                    text-2xl
+                    font-semibold
+                    mb-4
+                    "
+                  >
+                    My Journey
+                  </h3>
+
+                  <p
+                    className="
+                    text-muted-foreground
+                    leading-8
+                    "
+                  >
+                    My journey into web development
+                    began with a curiosity about how
+                    modern websites work behind the
+                    scenes. While pursuing my Diploma
+                    in Agriculture, I discovered a
+                    strong passion for technology and
+                    software development.
+                  </p>
+                </div>
+
+                <div>
+                  <p
+                    className="
+                    text-muted-foreground
+                    leading-8
+                    "
+                  >
+                    I started with HTML, CSS, and
+                    JavaScript, gradually moving into
+                    React, Tailwind CSS, Firebase,
+                    MongoDB, Express.js, Node.js, and
+                    Next.js. Every project teaches me
+                    something new about problem-solving,
+                    user experience, and application
+                    architecture.
+                  </p>
+                </div>
+
+                <div>
+                  <p
+                    className="
+                    text-muted-foreground
+                    leading-8
+                    "
+                  >
+                    What excites me most is transforming
+                    ideas into functional digital
+                    products. Whether it's a scholarship
+                    management platform, course
+                    management system, or community
+                    application, I enjoy solving
+                    real-world problems through
+                    technology.
+                  </p>
+                </div>
+
+              </div>
+            </div>
+
+            
+
           </div>
+
+
+              <div
+              className="
+              grid
+              md:grid-cols-3
+              gap-6
+              mt-12
+              "
+            >
+              <motion.div
+                whileHover={{
+                scale: 1.02,
+              }}
+              >
+              <div
+                className="
+                border
+                rounded-xl
+                p-5
+                "
+              >
+                <h4 className="font-semibold">
+                  Passion
+                </h4>
+
+                <p className="text-muted-foreground mt-2">
+                  Building modern web applications
+                  and learning new technologies.
+                </p>
+              </div>
+              </motion.div>
+
+              <motion.div
+                whileHover={{
+                scale: 1.02,
+              }}
+              >
+              <div
+                className="
+                border
+                rounded-xl
+                p-5
+                "
+              >
+                <h4 className="font-semibold">
+                  Interests
+                </h4>
+
+                <p className="text-muted-foreground mt-2">
+                  Software engineering, UI/UX,
+                  system design, and open-source.
+                </p>
+              </div>
+              </motion.div>
+
+              <motion.div
+                whileHover={{
+                scale: 1.02,
+              }}
+              >
+              <div
+                className="
+                border
+                rounded-xl
+                p-5
+                "
+              >
+                <h4 className="font-semibold">
+                  Goal
+                </h4>
+
+                <p className="text-muted-foreground mt-2">
+                  Become a highly skilled software
+                  engineer building impactful
+                  applications.
+                </p>
+              </div>
+              </motion.div>
+
+              
+            </div>
+
+
+
         </motion.div>
       </div>
     </section>

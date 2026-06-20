@@ -4,7 +4,26 @@ import Link from "next/link";
 import ThemeToggle from "./ThemeToggle";
 import { useActiveSection } from "@/hooks/useActiveSection";
 
+import {
+  Sheet,
+  SheetContent,
+  SheetTrigger,
+} from "@/components/ui/sheet";
+
+import { Menu } from "lucide-react";
+import { useState } from "react";
+
 const links = [
+  "About",
+  "Skills",
+  "Education",
+  "Experience",
+  "Projects",
+  "Contact",
+];
+
+const mobileLinks = [
+  "Home",
   "About",
   "Skills",
   "Education",
@@ -16,6 +35,7 @@ const links = [
 
 export default function Navbar() {
   const active = useActiveSection();
+  const [open, setOpen] = useState(false);
   return (
     // <nav className="sticky top-0 z-50 backdrop-blur border-b">
     <nav
@@ -55,7 +75,73 @@ export default function Navbar() {
           ))}
         </div>
 
-        <ThemeToggle />
+        {/* <ThemeToggle /> */}
+
+        <div className="flex items-center gap-2">
+
+          <ThemeToggle />
+
+          <Sheet
+            open={open}
+            onOpenChange={setOpen}
+          >
+            
+            <SheetTrigger asChild>
+              <button
+                className="
+                md:hidden
+                p-2
+                "
+              >
+                <Menu size={24} />
+              </button>
+            </SheetTrigger>
+
+            <SheetContent side="right">
+
+              <div
+                className="
+                flex
+                flex-col
+                gap-6
+                mt-10
+                "
+              >
+                {mobileLinks.map((link) => (
+                  <a
+                    key={link}
+                    href={`#${link.toLowerCase()}`}
+                    onClick={() => setOpen(false)}
+                    className={`
+                    text-lg
+                    font-medium
+                    ${active === link.toLowerCase()
+                        ? "text-blue-500"
+                        : ""
+                      }
+                    `}
+                  >
+                    {link}
+                  </a>
+                ))}
+
+                <a
+                  href="/resume.pdf"
+                  target="_blank"
+                  className="
+                  text-lg
+                  font-medium
+                  "
+                >
+                  Resume
+                </a>
+
+              </div>
+
+            </SheetContent>
+          </Sheet>
+
+        </div>
       </div>
     </nav>
   );

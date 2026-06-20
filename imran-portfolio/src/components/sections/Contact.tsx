@@ -1,3 +1,4 @@
+"use client";
 import {
   Mail,
   Phone,
@@ -6,7 +7,62 @@ import {
 
 import SectionHeading from "@/components/shared/SectionHeading";
 
+import { useState } from "react";
+import { toast } from "sonner";
+
 export default function Contact() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleSubmit = async (
+    e: React.FormEvent
+  ) => {
+    e.preventDefault();
+
+    try {
+      const response = await fetch(
+        "/api/contact",
+        {
+          method: "POST",
+
+          headers: {
+            "Content-Type":
+              "application/json",
+          },
+
+          body: JSON.stringify({
+            name,
+            email,
+            subject,
+            message,
+          }),
+        }
+      );
+
+      if (response.ok) {
+        toast.success(
+          "Message sent successfully!"
+        );
+
+        setName("");
+        setEmail("");
+        setSubject("");
+        setMessage("");
+      } else {
+        toast.error(
+          "Failed to send message."
+        );
+      }
+    } catch {
+      toast.error(
+        "Something went wrong."
+      );
+    }
+  };
+
+
   return (
     <section
       id="contact"
@@ -68,6 +124,7 @@ export default function Contact() {
         </div>
 
         <form
+          onSubmit={handleSubmit}
           className="
           max-w-3xl
           mx-auto
@@ -75,7 +132,7 @@ export default function Contact() {
           space-y-4
           "
         >
-          <input
+          {/* <input
             type="text"
             placeholder="Your Name"
             className="
@@ -84,10 +141,40 @@ export default function Contact() {
             rounded-lg
             p-3
             "
+          /> */}
+
+          <input
+            type="text"
+            value={name}
+            onChange={(e) =>
+              setName(e.target.value)
+            }
+            placeholder="Your Name"
+            className="
+            w-full
+            border
+            rounded-lg
+            p-3
+          "
           />
+
+          {/* <input
+            type="email"
+            placeholder="Your Email"
+            className="
+            w-full
+            border
+            rounded-lg
+            p-3
+            "
+          /> */}
 
           <input
             type="email"
+            value={email}
+            onChange={(e) =>
+              setEmail(e.target.value)
+            }
             placeholder="Your Email"
             className="
             w-full
@@ -97,8 +184,23 @@ export default function Contact() {
             "
           />
 
+          {/* <input
+            type="text"
+            placeholder="Subject"
+            className="
+            w-full
+            border
+            rounded-lg
+            p-3
+            "
+          /> */}
+
           <input
             type="text"
+            value={subject}
+            onChange={(e) =>
+              setSubject(e.target.value)
+            }
             placeholder="Subject"
             className="
             w-full
@@ -108,8 +210,23 @@ export default function Contact() {
             "
           />
 
+          {/* <textarea
+            rows={6}
+            placeholder="Message"
+            className="
+            w-full
+            border
+            rounded-lg
+            p-3
+            "
+          /> */}
+
           <textarea
             rows={6}
+            value={message}
+            onChange={(e) =>
+              setMessage(e.target.value)
+            }
             placeholder="Message"
             className="
             w-full
@@ -119,7 +236,7 @@ export default function Contact() {
             "
           />
 
-          <button
+          {/* <button
             className="
             px-6
             py-3
@@ -129,12 +246,30 @@ export default function Contact() {
             "
           >
             Send Message
+          </button> */}
+
+          <button
+            type="submit"
+            className="
+            px-6
+            py-3
+            rounded-lg
+          bg-blue-600
+          text-white
+          "
+          >
+            Send Message
           </button>
+
+
         </form>
       </div>
     </section>
   );
 }
+
+
+
 
 function ContactCard({
   icon,
@@ -145,6 +280,8 @@ function ContactCard({
   title: string;
   value: string;
 }) {
+
+
   return (
     <div
       className="
