@@ -65,6 +65,20 @@ export default function Education() {
                 {item.degree}
               </h3>
 
+              {/* Renders the link only if it exists in the data object */}
+              {item.link && (
+                <p className="mt-1">
+                  <a 
+                    href={item.link} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="text-blue-600 hover:underline font-medium text-sm inline-flex items-center gap-1"
+                  >
+                    View Certificate ↗
+                  </a>
+                </p>
+              )}
+              
               <p
                 className="
                 font-medium
