@@ -2,6 +2,7 @@ import {
   SiHtml5,
   // SiCss,
   SiJavascript,
+  SiTypescript,
   SiReact,
   SiNextdotjs,
   SiTailwindcss,
@@ -33,6 +34,10 @@ export const skills = {
     {
       name: "JavaScript",
       icon: SiJavascript,
+    },
+    {
+      name: "TypeScript",
+      icon: SiTypescript,
     },
     {
       name: "React",
